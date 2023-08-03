@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>mini-PS Documentation</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+        <center>
+            <hr noshade="" size="3">
+            <img src="imgs/img.jpg" width="100%">
+            <h1>Documentation</h1>
+            <hr noshade="" size="3">
+        </center>
+
+        <h2>Table of Content:</h2>
+            <ul>
+                <li><a href="#Overview">Project Overview</a></li>
+                <li><a href="#tech">Technologies & Techniques</a></li>
+                <li><a href="#db_files">Database & Files</a></li>
+                <li><a href="#games">Games Examples</a></li>
+                <li><a href="#appgui">Application GUI</a></li>
+                <li><a href="#snips">Code Snips</a></li>
+                <li><a href="#team">Team members & Roles</a></li>
+                <li><a href="#Privacy">Privacy Policy</a></li>
+                <li><a href="#References">References</a></li>
+            </ul>
+
+        <hr>
+
+        <h2 id="Overview">Project Overview</h2>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp; Welcome to mini-PS, Our project is an open source mini-PlayStation application that contains 4 open source games <b>(Alien invasion-Flappy Bird - Snake-Tic Tac Toe)</b>,
+                whose source code has been Refactored by team members to add the ability to control the settings available in each game by a simple graphical user interface (GUI) Based on Tkinter and PyQt5.<br><br>
+            </p>
+
+        <hr>
+
+        <h2 id="tech">Technologies and Techniques</h2>
+        <table cellspacing="15px">
+            <tr>
+                <td><h3>Tkinter</h3></td>
+                <td>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;is the only frameworks that’s built into the python standard library, has several strengths It’s cross-platform, so the same code works on Windows, macos, and Linux.
+                        Visual elements are rendered using native operating system elements, so applications built with tkinter look like they belong on the platform where they’re run.
+                        Although tkinter is considered the de-facto Python GUI framework, it’s not without criticism. One notable criticism is that GUIs built with tkinter look outdated.
+                        If you want a shiny, modern interface, then tkinter may not be what you’re looking for. so that we used <b>PyQt5.</b>
+                    </p>
+                </td>
+            </tr><br>
+            <tr>
+                <td><h3>PyQt5</h3></td>
+                <td>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;is a GUI widgets toolkit. It is a Python interface for Qt, one of the most powerful, and popular cross-platform GUI library. PyQt was developed by RiverBank Computing Ltd. 
+                        PyQt API is a set of modules containing a large number of classes and functions. While QtCore module contains non-GUI functionality for working with file and directory etc.,
+                        QtGui module contains all the graphical controls. In addition, there are modules for working with XML (QtXml), SVG (QtSvg), and SQL (QtSql).                    
+                    </p>
+                </td>
+            </tr><br>
+            <tr>
+                <td><h3>SQLlite3</h3></td>
+                <td>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world.
+                        SQLite is built into all mobile phones and most computers and comes bundled inside countless other applications that people use every day. 
+                    </p>
+                </td>
+            </tr><br>
+            <tr>
+                <td><h3>GitHub</h3></td>
+                <td>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;is a for-profit company that offers a cloud-based Git repository hosting service. Essentially, it makes it a lot easier for individuals and teams to use Git for version control and collaboration.
+                        GitHub’s interface is user-friendly enough so even novice coders can take advantage of Git. Without GitHub, using Git generally requires a bit more technical savvy and use of the command line.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>PEP 008</h3></td>
+                <td>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;is a document that provides guidelines and best practices on how to write Python code. It was written in 2001 by Guido van Rossum, Barry Warsaw, and Nick Coghlan. The primary focus of PEP 8 is to improve the readability and consistency of Python code.
+                        PEP stands for Python Enhancement Proposal, and there are several of them. A PEP is a document that describes new features proposed for Python and documents aspects of Python, like design and style, for the community.
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2 id="db_files">Database & Files</h2>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;In this section you will find information about the database that was used in the project as well as other files used to control the game settings.
+        </p><br>
+        
+        <center><img src="imgs/code_snips/db.jpg" height="600px" width="100%"></center>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp; We have used <b>SQLITE3</b> database, In it we store some user information such as first and last name, username, e-mail and password, and all this data is of TEXT data type.<br><br>
+            This data is requested from the new user <b>signup_frame.py</b> and then we add it to the database.
+            In the <b>signin_frame.py</b> frame, we ask the user for the user name and password to verify that he is registered in the program data and to be able to make an evaluation of the program.<br><br>
+            <b>username</b> and <b>email_address</b> are the primary keys in this table <b>`users_info`</b> and can never be repeated throughout the entire table.
+        </p><br>
+        
+        <center><img src="imgs/code_snips/json_file.png"  width="100%"></center>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp; In the file pictured above is one of the parts of the installation file code.
+            This code is an example of <b>`manipulating files`</b> and it is one of the conditions required in the project.
+            This code creates a file that contains all the paths in the program and is considered the link between the design and the code.
+            There is more than one file with the same format and idea within the program files, such as the game settings files, and they are 4 files.
+        </p><br>
+
+        <hr>
+
+        <h2 id="games">Games Examples</h2>
+            &nbsp;&nbsp;&nbsp;&nbsp; In this section of the document you will find information about each game that is supported within the program,
+            all the existing games are open source and you will find the source code of the original in the references below.
+            <table cellspacing="10px">
+                <tr>
+                    <td>
+                        <center>
+                        <img src="imgs/games_gifs/ai.gif" width="100%" height="500">
+                        <h3>Alien Invasion Game</h3>
+                        </center>
+                    </td>
+                    <td>
+                        <p>
+                            A simple game that depends on the two directions (Right and Left) to control the spaceship. and using space bar button to shot aliens ships.<br><br>
+                            Hossam hamdy made some modifications in the code so that we were able to make the game <b>`settings.py`</b><br>
+                            file read the settings from an external file <b>`ai_configurations.json`</b> using json module.<br><br>
+                            Then Implementing edit_ai.py frame to reads users input to update sittings file.<br><br>
+                            Then any action we do in the external settings file is implemented in the original settings of the game,<br>
+                            without the user modifying the source code. This game depends on pygame module.<br><br>
+                        </p>
+                    </td>
+                </tr><br>
+
+                <tr>
+                    <td>
+                        <p>
+                            A simple game that depends on Space bar button to avoid the pips.<br><br>
+                            Sameh Elisha made some modifications in the code so that we were able to make the game reads the settings from an external file <b>`fb_configurations.json`</b><br><br>
+                            Then Implementing edit_fb.py frame to reads users input to update sittings file.<br><br>
+                            Then any action we do in the external settings file is implemented in the original settings of the game,<br>
+                            without the user modifying the source code. This game depends on pygame module.<br><br>
+                        </p> 
+                    </td>
+                    <td>
+                        <center>
+                        <img src="imgs/games_gifs/fb.gif" width="100%" height="500">
+                        <h3>Flappy Birds Game</h3>
+                        </center>
+                    </td>
+                </tr><br>
+
+                <tr>
+                    <td>
+                        <center>
+                        <img src="imgs/games_gifs/sn.gif" width="100%" height="500">
+                        <h3>Snake Game</h3>
+                        </center>
+                    </td>
+                    <td>
+                        <p>
+                            A simple game that depends on Space bar button to avoid the pips.<br><br>
+                            Asmaa elnggar made some modifications in the code so that we were able to make the game reads the settings from an external file <b>`sn_configurations.json`</b><br><br>
+                            Then Implementing edit_sn.py frame to reads users input to update sittings file.<br><br>
+                            Then any action we do in the external settings file is implemented in the original settings of the game,<br>
+                            without the user modifying the source code. This game depends on pygame module.<br><br>
+                        </p>
+                    </td>
+                </tr><br>
+
+                <tr>
+                    <td>
+                        <p>
+                            A simple game that depends on left click to choose where to put your symbol.<br><br>
+                            Engy Essam made some modifications in the code so that we were able to make the game reads the settings from an external file <b>`xo_configurations.json`</b><br><br>
+                            Then Implementing edit_xo.py frame to reads users input to update sittings file.<br><br>
+                            Then any action we do in the external settings file is implemented in the original settings of the game,<br>
+                            without the user modifying the source code. This game depends on pygame module.<br><br>
+                        </p> 
+                    </td>
+                    <td>
+                        <center>
+                        <img src="imgs/games_gifs/xo.gif" width="100%" height="500">
+                        <h3>Tic Tac Toe Game</h3>
+                        </center>
+                    </td>
+                </tr><br>
+            </table>
+
+        <hr>
+
+        <h2 id="appgui">Application GUI</h2>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; In this section you will find a picture and an explanation of most of the interfaces in the program with unique and unobtrusive functions.</p>
+
+            <center><img src="imgs/gui_imgs/main_page.png" width="100%">
+            <h3>Main application Window</h3>
+            <p>
+                In the main program interface has been programmed using <b>PyQt5</b>
+
+                On the left, you will find a group of buttons, one for the home page (displayed here, four for games, and another for exiting the program.
+
+                The Open Documentation button will display the file you are reading now, and the Visit Repository button will open the project's repository on GitHub.
+
+                The Feedback button takes simple information from the user and sends his message to us on the project's e-mail.
+
+                The last button takes a copy of the settings and sends it to the user via his e-mail from database.
+            </p>
+            </center><br>
+
+            <center><img src="imgs/gui_imgs/game_page.png" width="100%">
+            <h3>Game tabe</h3>
+            <p>
+                Each game has a window that contains a simple picture of it, the way to play, the start of the game and the opening of its modification interface.
+            </p>
+            </center><br>
+
+            <center><img src="imgs/gui_imgs/feedback.png" width="100%" height="100%">
+            <h3>Feedback.py frame.</h3>
+            <p>
+                In the feedback window, we ask the user to enter his name and e-mail that we can communicate with him through in case we want to thank him or respond to complaints about his experience of the program.
+                We also ask them to evaluate the program and then send all this information as an e-mail message to the e-mail designated for the project on Gmail via a stmp.gmail server.<br><br>
+
+            </p>
+            </center><br>
+
+            <center><img src="imgs/gui_imgs/edit_page.png" width="100%" height="100%">
+            <h3>Alien Invasion edit sittings frame.</h3>
+            <p>
+                In this window, the current values of all the adjustable game settings are displayed, then the user is allowed to enter new values,
+                and when pressing the update button, the new values are written in the game’s settings file. Each game has a similar interface.
+            </p>
+            </center><br>
+
+        <hr>
+
+        <h2 id="snips">Code Snips</h2>
+
+            <center><img src="imgs/code_snips/logger.png" width="100%">
+            <h3>Logger function @ functions.py</h3>
+            <p>
+
+            </p>
+            </center><br>
+
+            <center><img src="imgs/code_snips/signup.png" width="100%" height="700">
+            <h3>Signup function</h3>
+            <p>
+
+            </p>
+            </center><br>
+
+            <center><img src="imgs/code_snips/tkinter.png" width="100%" height="100%">
+            <h3>Init edit_fb.py frame.</h3>
+            <p>
+
+            </p>
+            </center><br>
+
+        <hr>
+
+        <h2 id="team">Team Members and Roles</h2>
+        <p>In this section you will find all about team members and there roles<br></p>
+
+        <table cellspacing="15">
+            <tr>
+                <td><h2>Sameh Elisha&nbsp;&nbsp;&nbsp;&nbsp;</h2></td>
+                <td>
+                    <ul>
+                        <li>Refactoring Flappy_Birds Game code(extract game sittings to json file).</li>
+                        <li>Implementing edit_fb.py (Flappy birds game sittings) frame in Tkinter.</li>
+                        <li>Handling all parts of the hard copy documentation.</li>
+                        <li>Reviewing Project code.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <hr style="border-style: dotted none none; width:20%; border-width: 7px;">
+
+        <table cellspacing="15">
+            <tr>
+                <td><h2>Engy Essam&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></td>
+                <td>
+                    <ul>
+                        <li>Refactored Tic Tac Toe Game.</li>
+                        <li>Implementing edit_xo.py frame in Tkinter.</li>
+                        <li>Contribute in project documentation.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <hr style="border-style: dotted none none; width:20%; border-width: 7px;">
+
+        <table cellspacing="15">
+            <tr>
+                <td><h2>Gehad Ahmed&nbsp;&nbsp;&nbsp;</h2></td>
+                <td>
+                    <ul>
+                        <li>Implementing project database in sqlite3.</li>
+                        <li>Implementing signin_frame in Tkinter.</li>
+                        <li>Produce project presentation and Contribute in project documentation</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <hr style="border-style: dotted none none; width:20%; border-width: 7px;">
+
+        <table cellspacing="15">
+            <tr>
+                <td><h2>Asmaa Elnagar&nbsp;&nbsp;</h2></td>
+                <td>
+                    <ul>
+                        <li>Refactoring Snake Game.</li>
+                        <li>Implementing edit_sn.py frame in Tkinter.</li>
+                        <li>Contribute in project documentation.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <hr style="border-style: dotted none none; width:20%; border-width: 7px;">
+
+        <table cellspacing="15">
+            <tr>
+                <td><h2>Taqwa Mohamed</h2></td>
+                <td>
+                    <ul>
+                        <li>Implementing feedback.py frame with Tkinter (without send_feedback button action).</li>
+                        <li>Implementing signup_frame.py (with out database).</li>
+                        <li>Contributeing in project documentation</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <hr style="border-style: dotted none none; width:20%; border-width: 7px;">
+
+        <table cellspacing="15">
+            <tr>
+                <td><h2>Hossam Hamdy&nbsp;</h2></td>
+                <td>
+                    <ul>
+                        <li>Refactoring Alien Invasion Game code & Implementing edit_ai.py frame in Tkinter.</li>
+                        <li>Design main application GUI (mini-PS.py) using PyQt5.</li>
+                        <li>Implementing project Cores:
+                            <ul>
+                                <li>Setup.py</li>
+                                <li>functions.py</li>
+                                <li>sittings_runner.py</li>
+                            </ul>
+                        </li>
+                        <li>Refactoring team members code to meet PEP-008 standards.</li>
+                        <li>Putting all project parts together, organizing files and uploading them to remote repository.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2 id="Privacy">Privacy Policy</h2>
+        <h3>What data do we collect?</h3>
+        <p>
+            We collect basic user information such as first and last name, email, username and password, and we also collect event messages in a file.
+            All this data is stored on the user's device and we do not deal with it outside this scope, we do not have any accountability in the event of the loss of this data.
+        </p>
+
+
+        <h3>Information usage.</h3>
+        <p>
+            We do not use this data for any profit purposes or use it in any data analysis, at least until this moment.
+            We collect e-mail to send you feedback feedback and current game settings if a backup copy is requested.
+        </p>
+
+        <h3>Information security.</h3>
+        <p>
+            Users' passwords are stored encrypted and their original text can only be retrieved by the user, so we have programmed a function that does the hashing (SHA256) of the text.
+            <center><img src="imgs/code_snips/hashing.png" width="100%">
+            <h3>Calc hash function @ functions.py</h3>
+            </center><br>
+        </p>
+
+        <hr>
+
+        <h2 id="References">References</h2>
+        <table cellspacing="10">
+            <tr>
+                <td>[Book]</td>
+                <td><a href="https://www.amazon.com/Starting-Out-Python-Tony-Gaddis/dp/0134444329" target="_blank">Starting Out with Python - Tony Gaddis</a></td>
+            </tr>
+            <tr>
+                <td>[Book]</td>
+                <td><a href="https://www.amazon.com/Automate-Boring-Stuff-Python-2nd-ebook-dp-B07VSXS4NK/dp/B07VSXS4NK/ref=mt_other?_encoding=UTF8&me=&qid=1629739482">Automate the Boring Stuff with Python - AI Segwart</a></td>
+            </tr>
+            <tr>
+                <td>[Book]</td>
+                <td><a href="https://www.amazon.com/Python-Kids-Playful-Introduction-Programming/dp/1593274076">Python for Kids: A Playful Introduction to Programming - Jason R. Briggs</a></td>
+            </tr>
+            <tr>
+                <td>[Article]</td>
+                <td><a href="https://stackoverflow.com/questions/43028904/converting-ui-to-py-with-python-3-6-on-pyqt5">Converting .ui to .py with Python 3.6 on PyQt5.</a></td>
+            </tr>
+            <tr>
+                <td>[Article]</td>
+                <td><a href="https://www.codespeedy.com/tic-tac-toe-gui-in-python-using-tkinter/">Tic Tac Toe Game</a></td>
+            </tr>
+            <tr>
+                <td>[Article]</td>
+                <td><a href="https://nitratine.net/blog/post/how-to-import-a-pyqt5-ui-file-in-a-python-gui/">How to Import a PyQt5 .ui File in a Python GUI</a></td>
+            </tr>
+            <tr>
+                <td>[Course]</td>
+                <td><a href="https://www.udemy.com/course/100-days-of-code/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Python_v.PROF_la.EN_cc.ROW_ti.7380&utm_content=deal4584&utm_term=_._ag_85724077624_._ad_535397245836_._kw__._de_c_._dm__._pl__._ti_dsa-774930046209_._li_1005390_._pd__._&matchtype=b&gclid=Cj0KCQjwjo2JBhCRARIsAFG667XX1_oIcW1KWL_A3rxKYPcnK10d3gpR2kdzS0Ddc2PykhDoSTR2aqEaAtMYEALw_wcB">100 Days of Code - Dr. Angela Yu</a></td>
+            </tr>
+            <tr>
+                <td>[Course]</td>
+                <td><a href="https://www.udemy.com/course/the-complete-python-game-development-bootcamp-2021-python3/">The Complete Python Game Development Bootcamp 2021 | Python3</a></td>
+            </tr>
+            <tr>
+                <td>[Video]</td>
+                <td><a href="https://youtu.be/PHdZdrMCKuY">Snake Game</a></td>
+            </tr>
+        </table>
+
+    </body>
+</html>
